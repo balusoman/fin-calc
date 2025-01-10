@@ -1,0 +1,109 @@
+<p>sip-calculator works!</p>
+
+<div class="container">
+  <form [formGroup]="mfForm" (ngSubmit)="onCalculate()">
+    <h1>Investment Details</h1>
+    <label for="years">Years</label>
+    <input
+      type="number"
+      name="years"
+      formControlName="years"
+      placeholder="Enter number of years"
+      required
+    />
+    <br />
+
+    <label for="sip">SIP (₹)</label>
+    <input
+      type="number"
+      formControlName="sip"
+      name="sip"
+      placeholder="Enter SIP amount"
+      required
+    />
+    <br />
+
+    <label for="stepUp">stepUp (₹)</label>
+    <input
+      type="number"
+      formControlName="stepUp"
+      name="stepUp"
+      placeholder="Enter stepUp amount"
+      required
+    />
+    <br />
+
+    <label for="firstCapital">First Capital (₹)</label>
+    <input
+      type="number"
+      formControlName="firstCapital"
+      name="firstCapital"
+      placeholder="Enter first capital amount"
+      required
+    />
+    <br />
+
+    <label for="rateOfInterest">Rate of Interest (%)</label>
+    <input
+      type="number"
+      formControlName="rateOfInterest"
+      name="rateOfInterest"
+      placeholder="Enter rate of interest"
+      required
+    />
+    <br />
+
+    <label for="expRatio">expense ratio of mf(%)</label>
+    <input
+      type="number"
+      formControlName="expRatio"
+      name="expRatio"
+      placeholder="Enter rate of expRatio"
+      required
+    />
+    <br />
+    <hr />
+
+    <div class="button">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</div>
+
+<!-- <label for="totalInvestment">total Investment</label>
+<input
+  type="number"
+  [(ngModel)]="totalInvestment"
+  name="totalInvestment"
+  placeholder="totalInvestment"
+/>
+<br />
+
+<label for="gainedWealth">gainedWealth</label>
+<input
+  type="number"
+  [(ngModel)]="gainedWealth"
+  name="gainedWealth"
+  placeholder="gainedWealth"
+  required
+/>
+<br />
+
+<label for="expectedAmount">expectedAmount</label>
+<input
+  type="number"
+  [(ngModel)]="finalWealth"
+  name="finalWealth"
+  placeholder="expectedAmount"
+  required
+/> -->
+totalInvestment : {{ totalInvestment }}
+<br />
+interest : {{ gainedWealth }}
+<br />
+total mutual fund Expense : {{ totalExpense }}
+<br />
+finalWealth : {{ finalWealth }}
+<br />
+<hr />
+{{ mfForm.value | json }}
